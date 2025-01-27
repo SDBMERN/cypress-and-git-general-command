@@ -81,6 +81,11 @@ Push changes to a remote repository.
 ```cmd
 git push origin <branch-name>
 ```
+Or pushing existing repo.
+```cmd
+git push
+```
+
 Pull changes from a remote repository.
 ```cmd
 git pull origin <branch-name>
@@ -114,42 +119,10 @@ Reset to the last commit (hard, removes changes).
 git reset --hard HEAD~1
 ```
 
-## Tags
-Create a tag.
-```cmd
-git tag <tag-name>
-```
-List all tags.
-```cmd
-git tag
-```
-Push a tag to the remote repository.
-```cmd
-git push origin <tag-name>
-```
-
-## Stashing
-Save changes temporarily.
-```cmd
-git stash
-```
-Apply the last stashed changes.
-```cmd
-git stash apply
-```
-List all stashes.
-```cmd
-git stash list
-```
-
 ## Collaboration
 Fetch changes from the remote repository.
 ```cmd
 git fetch
-```
-Rebase your branch with the main branch.
-```cmd
-git rebase main
 ```
 
 ## Delete Branches
@@ -177,19 +150,11 @@ Using npm
 ```cmd
 npm install cypress --save-dev
 ```
-Using yarn
-```cmd
-yarn add cypress --dev
-```
+
 ## For Opening Cypress 
 Using npx
 ```cmd
 npx cypress open
-```
-
-Using yarn
-```cmd
-yarn run cypress open
 ```
 
 
@@ -217,16 +182,11 @@ By default, Cypress uses the Electron browser in headless mode when running test
 
 Run in a Specific Browser Headlessly
 
-Run in Chrome:
+Run in Headless:
 ```cmd
-npx cypress run --browser chrome
+npx cypress run --headless
 ```
 
-
-Run in Firefox:
-```cmd
-npx cypress run --browser firefox
-```
 
 ## Run Specific Spec File
 
