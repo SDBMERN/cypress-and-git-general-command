@@ -163,6 +163,75 @@ git push origin --delete <branch-name>
 ```
 
 ## Ignoring Files
-- Create a `.gitignore` file and add files/folders to ignore:
-  ```bash
+Create a `.gitignore` file and add files/folders to ignore:
+  ```cmd
   echo "node_modules/" > .gitignore
+```
+
+
+
+# Cypress Common commands
+
+## For installing Cypress 
+Using npm
+```cmd
+npm install cypress --save-dev
+```
+Using yarn
+```cmd
+yarn add cypress --dev
+```
+## For Opening Cypress 
+Using npx
+```cmd
+npx cypress open
+```
+
+Using yarn
+```cmd
+yarn run cypress open
+```
+
+
+## For checking the Cypress version
+Using npx
+```cmd
+npx cypress --version
+```
+
+To make running Cypress easier, add the following to the scripts section of your package.json file:
+```cmd
+"scripts": {
+  "cypress:open": "cypress open",
+  "cypress:run": "cypress run"
+}
+```
+Now, you can run:
+```cmd
+npm run cypress:open
+```
+
+
+## To run Cypress in a headless browser, you can use the following commands:
+By default, Cypress uses the Electron browser in headless mode when running tests.
+
+Run in a Specific Browser Headlessly
+
+Run in Chrome:
+```cmd
+npx cypress run --browser chrome
+```
+
+
+Run in Firefox:
+```cmd
+npx cypress run --browser firefox
+```
+
+## Run Specific Spec File
+
+To run a specific test file, provide the file path:
+```cmd
+npx cypress run --spec "cypress/e2e/example.cy.js"
+```
+
